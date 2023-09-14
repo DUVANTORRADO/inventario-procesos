@@ -1,2 +1,2 @@
 # inventario-procesos
-inventario proyecto de procesos de negocio
+proyecto de clases de procesos de negocios. Api de inventario.
