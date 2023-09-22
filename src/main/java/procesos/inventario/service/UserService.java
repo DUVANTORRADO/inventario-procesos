@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import procesos.inventario.model.User;
 import procesos.inventario.repositorio.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
@@ -23,6 +25,7 @@ public class UserService {
            User userBd = userRepository.findById(id).get();
            userBd.setFirstName(user.getFirstName());
             userBd.setAddress(user.getAddress());
+            userBd.setEmail(user.getEmail());
            userBd.setLastName(user.getLastName());
            userBd.setPhone(user.getPhone());
            return userRepository.save(userBd);
@@ -37,4 +40,35 @@ public class UserService {
         }
         return false;
     }
+    public List<User> findAllUsers(){
+        return (List<User>) userRepository.findAll();
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
